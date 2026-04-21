@@ -22,6 +22,7 @@ This repository is an MVP backend, Python SDK, and demo for the TrustMesh Agent 
 - Audit logs for verification decisions
 - Python SDK for local integration
 - B2B procurement demo
+- Customer-facing browser demo at `/demo`
 
 ## Demo Story
 
@@ -68,6 +69,12 @@ Run the demo in another terminal:
 
 ```bash
 .venv/bin/python -m demos.procurement_demo
+```
+
+Or open the customer-facing browser demo:
+
+```text
+http://127.0.0.1:8000/demo
 ```
 
 For detailed setup, see [docs/QUICKSTART.md](./docs/QUICKSTART.md).
@@ -118,6 +125,7 @@ More examples: [docs/SDK_USAGE.md](./docs/SDK_USAGE.md).
 - `POST /v1/credentials/verify`
 - `POST /v1/credentials/{id}/revoke`
 - `GET /v1/audit-logs`
+- `GET /demo`
 
 See [docs/API_REFERENCE.md](./docs/API_REFERENCE.md).
 

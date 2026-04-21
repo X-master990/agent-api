@@ -34,6 +34,14 @@ cd agent-api
 .venv/bin/python -m demos.procurement_demo
 ```
 
+For a visual walkthrough, open:
+
+```text
+http://127.0.0.1:8000/demo
+```
+
+Click `Run full authorization demo`.
+
 ## Expected Demo Output
 
 The demo should print results similar to:

@@ -97,6 +97,7 @@ The MVP includes:
 - `did:key` agent identity
 - Python SDK
 - procurement demo
+- browser-based customer demo
 - audit logs
 
 ## CTA Footer

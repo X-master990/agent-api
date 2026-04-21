@@ -31,6 +31,7 @@ cd "/Users/b/Desktop/ai agent security"
 Open the docs:
 
 - `http://127.0.0.1:8000/docs`
+- `http://127.0.0.1:8000/demo`
 
 ## 4. Run the procurement demo
 
@@ -55,6 +56,14 @@ wrong vendor: False resource_scope_mismatch
 over limit: False amount_limit_exceeded
 forbidden action: False action_not_allowed
 ```
+
+For a customer-facing visual demo, open:
+
+```text
+http://127.0.0.1:8000/demo
+```
+
+Click `Run full authorization demo` to create an agent, issue a credential, verify allowed and denied requests, and show audit logs.
 
 ## 5. Use the SDK directly
 

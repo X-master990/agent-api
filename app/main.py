@@ -11,6 +11,7 @@ from app.core.config import get_settings
 import app.core.model_registry  # noqa: F401
 from app.credentials.views import router as credentials_router
 from app.crypto.views import router as crypto_router
+from app.demo.views import router as demo_router
 from app.probe.views import router as probe_router
 
 logger = logging.getLogger(__name__)
@@ -29,6 +30,7 @@ app.include_router(agents_router, prefix="/v1/agents", tags=["agents"])
 app.include_router(credentials_router, prefix="/v1/credentials", tags=["credentials"])
 app.include_router(audit_router, prefix="/v1/audit-logs", tags=["audit logs"])
 app.include_router(crypto_router, prefix="/v1/crypto", tags=["crypto"])
+app.include_router(demo_router, prefix="/demo", tags=["demo"])
 app.include_router(probe_router, prefix="/probe", tags=["probe"])
 
 # Sets all CORS enabled origins

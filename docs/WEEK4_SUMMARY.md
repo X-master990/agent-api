@@ -9,6 +9,7 @@ Week 4 packages the MVP for external beta feedback.
 - Error code documentation
 - Customer interview guide
 - Landing page copy
+- Customer-facing browser demo at `/demo`
 - GitHub release checklist
 - GitHub repository setup and push
 

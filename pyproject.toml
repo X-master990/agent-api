@@ -1,0 +1,59 @@
+[project]
+authors = [{ name = "TrustMesh", email = "founders@trustmesh.dev" }]
+dependencies = [
+    "alembic>=1.18.3",
+    "asyncpg>=0.31.0",
+    "base58>=2.1.1",
+    "cryptography>=45.0.0",
+    "fastapi>=0.128.0",
+    "httpx>=0.28.1",
+    "prometheus-client>=0.24.1",
+    "pydantic-settings>=2.12.0",
+    "pydantic[email]>=2.12.5",
+    "pyjwt>=2.11.0",
+    "sqlalchemy[asyncio]>=2.0.46",
+    "uvicorn[standard]>=0.40.0",
+]
+description = "TrustMesh Agent Authorization Layer MVP API."
+name = "trustmesh-api"
+requires-python = ">=3.11,<3.14"
+version = "0.1.0"
+
+[dependency-groups]
+dev = [
+    "greenlet>=3.3.1",
+    "httpx>=0.28.1",
+    "mypy>=1.19.1",
+    "pre-commit>=4.5.1",
+    "pytest-asyncio>=1.3.0",
+    "pytest>=9.0.2",
+    "ruff>=0.14.14",
+]
+
+[tool.uv]
+package = false
+
+[build-system]
+build-backend = "hatchling.build"
+requires = ["hatchling"]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+asyncio_default_test_loop_scope = "function"
+asyncio_mode = "auto"
+filterwarnings = [""]
+testpaths = ["tests"]
+
+[tool.mypy]
+exclude = [".venv", "alembic"]
+files = ["app/**", "trustmesh/**", "demos/**"]
+python_version = "3.11"
+strict = true
+
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+# pycodestyle, pyflakes, isort, pylint, pyupgrade
+ignore = ["E501"]
+select = ["E", "F", "I", "PL", "UP", "W"]
